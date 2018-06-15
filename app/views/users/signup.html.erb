@@ -1,0 +1,36 @@
+<h1>Welcome  to the signup page</h1>
+
+<%= link_to 'LOGIN', controller: 'users' %>
+
+<%= form_with(model: @user, local: true) do |form| %>
+  <p>
+    <%= form.label :Name %><br>
+    <%= form.text_field :Name %>
+  </p>
+ 
+
+ <p>
+    <%= form.label :Email %><br>
+    <%= form.text_field :Email %>
+  </p>
+ 
+
+ <p>
+    <%= form.label :Password %><br>
+    <%= form.password_field :Password %>
+  </p>
+ 
+
+ <p>
+    <%= form.label :ConfirmPassword %><br>
+    <%= form.password_field :ConfirmPassword %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+  <% end %>
+
+
+
+
+

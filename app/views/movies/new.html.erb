@@ -1,0 +1,28 @@
+<% if current_user %>  
+<h3>Create a movie</h3>
+
+
+<%= form_with scope: :movie, url: movies_path , local: true do |form| %>
+  <p>
+    <%= form.label :Name %><br>
+    <%= form.text_field :name %>
+  </p>
+ 
+  <p>
+    <b><%= form.label :Upload_Image_for_the_movies %></b><br><br>
+    <%= form.file_field :image %>
+  </p>
+ 
+  <p>
+    <%= form.submit 'Save' %>
+  </p>
+<% end %>
+
+<% else %>  
+    <h3> You have to login first</h3>
+    <%= link_to '<button type="button">Login</button>'.html_safe, login_path %>   
+    <br>
+    <p>or</p>
+    <%= link_to '<button type="button">Create a account</button>'.html_safe, new_user_path %>
+    
+<% end %>      

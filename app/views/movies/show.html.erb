@@ -1,0 +1,24 @@
+<% if current_user %> 
+<p>
+  <strong>Movie Name:</strong>
+  <%= @movie.name %>
+</p>
+ 
+<p>
+  <strong>Image for the Movie:</strong>
+  <%#= @article.text %>
+</p>
+ <%= image_tag @movie.image.thumb.url %>
+
+<% else %>  
+    <h3> You have to login first</h3>
+    <%= link_to '<button type="button">Login</button>'.html_safe, login_path %>   
+    <br>
+    <p>or</p>
+    <%= link_to '<button type="button">Create a account</button>'.html_safe, new_user_path %>
+    
+    <%= link_to 'LOGOUT', logout_path %> 
+
+<% end %>    
+
+

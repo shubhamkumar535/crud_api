@@ -1,0 +1,20 @@
+<h1>Welcome  to the Login page</h1>
+
+
+<%= form_with scope: :user,url:  login_path, local: true do |form| %>
+  <p>
+    <%= form.label :Email %><br>
+    <%= form.text_field :email %>
+  </p>
+ 
+
+ <p>
+    <%= form.label :Password %><br>
+    <%= form.password_field :password %>
+  </p>
+ 
+
+  <p>
+    <%= form.submit "Login" %>
+  </p>
+  <% end %>

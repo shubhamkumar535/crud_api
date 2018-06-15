@@ -1,0 +1,33 @@
+<% if current_user %>
+
+<h3>List of all the movies</h3>
+<table border=2>
+ <tr>
+   <th>Movie Name</th>
+   <th>Movie Image</th>
+   <th colspan="3">Operations</th>
+    </tr>
+
+ <% @movie.each do |movie| %>
+   <tr>
+     <td><%= movie.name %></td>
+     <td><%= image_tag movie.image.thumb.url %></td>
+     <td><%= link_to '<button type="button">Show</button>'.html_safe, movie_path(movie) %></td>
+     <td> <%= link_to '<button type="button">Like Movie</button>'.html_safe, like_path(movie) %> <b> <%= movie.like %>  </b> </td>
+      <td> <%= link_to '<button type="button">Disike Movie</button>'.html_safe, dislike_path(movie) %> <b> <%= movie.dislike %>  </b> </td>
+
+   </tr>
+ <% end %>
+</table><br>
+<%= link_to '<button type="button">Create a new movie</button>'.html_safe, new_movie_path %><br>
+<br>
+Logged in as <%= current_user.email %>.  
+      <%= link_to "Log Out", logout_path %> 
+<% else %>  
+<h3>You Have to Login Firstif @movie.save</h3>
+<%= link_to '<button type="button">Sign Up</button>'.html_safe, new_user_path %>
+<%= link_to '<button type="button">Login</button>'.html_safe, login_path %>
+ <% end %> 
+
+
+

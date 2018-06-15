@@ -1,0 +1,21 @@
+<h1>Welcome  to the Login page</h1>
+
+
+<%= form_with model: @users,url: sessions_path, local: true do |form| %>
+  <p>
+    <%= form.label :Email %><br>
+    <%= form.text_field :email %>
+  </p>
+ 
+
+ <p>
+    <%= form.label :Password %><br>
+    <%= form.password_field :password %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+  <br><br><br><br>
+  <%= link_to 'SIGNUP',  new_user_path%>
+  <% end %>
