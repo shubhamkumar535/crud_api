@@ -1,0 +1,62 @@
+
+	<div class="middle-container background">
+		<div class="container-common">
+			<div class="row align-items-center justify-content-center min-ht-window">
+				<div class="col-md-12">
+					<div class="middle-block max-WT-500 margin-auto pLR0">
+						<div class="logo-inner">
+							<a href="index.html">
+								<img src="/assets/logo-inner.png" alt="Logo">
+							</a>
+						</div>
+						<div class="form-block min-ht-400 pb0">
+							<div class="form-header">
+								<h2>Login</h2>
+								<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
+							</div>
+							<!-- <form class="main-form p10 mt20" action="login-vailidation.html"> -->
+								<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) , :html => {:class => 'main-form p10 mt20'} do |f| %>
+								<div class="form-group row">
+									<div class="col-md-12">
+										<input type="text" class="form-control" placeholder="Login/Email Address">
+									</div>
+								</div>
+								<div class="form-group row">
+									<div class="col-md-12">
+										<input type="password" class="form-control" placeholder="Password">
+									</div>
+								</div>
+								<div class="form-group row">
+									<div class="col-md-12">
+										<label class="checkbox-design remember">
+											<input type="checkbox" name="remember">
+											<span></span>
+											Remember Me
+										</label>
+										<a href="forgot-password.html" class="forgot-pass">Forgot Password?</a>
+									</div>
+								</div>
+								<div class="form-group row">
+                  <div class="col-sm-12 text-center">
+                    <div class="google-captcha">
+                      <img src="/assets/google-captcha.png" alt="google captcha">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row mb0">
+                  <div class="col-md-12">
+                    <button class="btn btn-block btn-login">SIGN IN</button>
+                    <div class="register">
+                      <!-- <p>or <a href="register.html" class="link-register">Sign Up</a></p> -->
+                      <%= link_to 'Sign Up',signin_path, class: "btn btn-sm btn-primary"%>
+                    </div>
+                  </div>
+                </div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	

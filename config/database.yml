@@ -1,0 +1,30 @@
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+#
+default: &default
+ adapter: postgresql
+ encoding: unicode
+ username: postgres
+ password: postgres
+ # For details on connection pooling, see Rails configuration guide
+ # http://guides.rubyonrails.org/configuring.html#database-pooling
+ pool: 5
+ host: localhost
+
+development:
+  <<: *default
+  database: botexa_db
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: botexa_db
+
+production:
+  <<: *default
+  database: botexa_db

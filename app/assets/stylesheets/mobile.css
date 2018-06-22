@@ -1,0 +1,80 @@
+
+@media (max-width:1440px) {
+  .container-common{max-width:1200px;}
+  .cid-qStcGrjtgB .menu-logo .navbar-brand{margin-left:0.5rem; margin-right:0.5rem;}
+  .menu .navbar-brand .navbar-logo img{max-width:200px;}
+  .cid-qStcGrjtgB .navbar-toggleable-sm .navbar-collapse{padding-right:0.5rem;}
+  .navbar-buttons a.btn{margin:2px;}
+}
+@media (max-width:1366px) {
+  
+}
+@media (max-width:1280px) {
+  .navbar-expand .navbar-nav .nav-link{margin:0rem .5rem !important}
+}
+
+@media (max-width:1200px) {
+  
+}
+
+@media (max-width:1199px) {
+  .container-common{max-width:991px;}
+  .container-custome{max-width:991px;}
+  .menu .navbar-brand .navbar-logo img{max-width:140px;}
+  .navbar-buttons a.btn{margin:2px; font-size:12px; padding:0.4rem 0.5rem;}
+  .full_secured_box{width:calc(25% - 8px);}
+  .rich_trading_box{width:calc(25% - 8px);}
+}
+
+@media (max-width: 1024px) {
+  
+}
+
+@media (max-width: 991px) {
+  .navbar-brand{padding:0.625rem 0!important;}
+  .full_secured_box{width:calc(33% - 8px);}
+  .rich_trading_box{width:calc(33% - 8px);}
+  .complian-card .card-body{padding:1.25rem 0px;}
+  .cid-qStcGsQ63V{padding:30px 0px;}
+  .cid-qStcGsQ63V .content {
+    text-align: center;
+  }
+  .cid-qStcGsQ63V .content > div:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  .validate-style1 .error::before {border: none;}
+  .validate-style1 .error {background:none; color:#e93e2c; position:static; padding:5px 0 0;}
+}
+
+@media (max-width:767px) {
+ .full_secured_sec{padding:30px 0px;}
+ .rich_trading_sec{padding:30px 0px;}
+ .static_content{padding:30px 0px;}
+}
+
+@media (max-width:640px) {
+  
+}
+
+@media (max-width:576px) {
+  .zeroSec-content h1{font-size:28px;}
+  .btn-termCondition{padding:10px 20px;}
+  .full_secured_box{width:calc(50% - 8px);}
+  .rich_trading_box{width:calc(50% - 8px);}
+  .complian-list h4{font-size:18px;}
+  .complian-list h4 img{width:20px;}
+  .regulat-card img{width:110px;}
+  .regulat-card .card-body h4{font-size:20px;}
+  .theNews_box{min-height:auto; padding:8px;}
+  .form-block{padding:15px 0px;}
+  .form-header{padding:0px 15px;}
+}
+
+@media (max-width:480px) {
+  .full_secured_box{width:100%;}
+  .rich_trading_box{width:100%;}
+}
+
+@media (max-width:360px) {
+  
+}
