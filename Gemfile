@@ -31,6 +31,7 @@ gem 'jquery-rails'
 gem 'bootstrap'
 gem 'jquery-turbolinks'
 gem 'delayed_job_active_record'
+gem 'activestorage'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

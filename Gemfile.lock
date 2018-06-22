@@ -33,6 +33,11 @@ GEM
       activemodel (= 5.1.6)
       activesupport (= 5.1.6)
       arel (~> 8.0)
+    activestorage (0.1)
+      actionpack (>= 5.1)
+      activejob (>= 5.1)
+      activerecord (>= 5.1)
+      activesupport (>= 5.1)
     activesupport (5.1.6)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
@@ -207,6 +212,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activestorage
   bootstrap
   byebug
   capybara (~> 2.13)
