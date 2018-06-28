@@ -1,76 +1,75 @@
-<div class="menu cid-qStcGrjtgB" once="menu" id="menu1-e">
-   <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
-     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-       <div class="hamburger">
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-       </div>
-     </button>
-     <div class="menu-logo">
-       <div class="navbar-brand">
-         <span class="navbar-logo">
-             <%= link_to(image_tag("/assets/logo2.png") , root_path) %>
-         </span>
-         <!-- <span class="navbar-caption-wrap">
-           <a class="navbar-caption text-white display-4" href="javascritp:void(0);">
-             MOBIRISE
-           </a>
-         </span> -->
-       </div>
-     </div>
-     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-       <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
-         <li class="nav-item">
-           <a class="nav-link link text-white" href="#">
-             DEPOSIT
-           </a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link link text-white" href="#">
-             WITHDRAW 
-           </a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link link text-white" href="#">
-             WALLET 
-           </a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link link text-white" href="#">
-             EXCHANGE 
-           </a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link link text-white" href="#">
-             SUPPORT 
-           </a>
-         </li>
-       </ul>
-       <div class="navbar-buttons mbr-section-btn">
-         <% if !user_signed_in? %>
-         <% else %>
-         <%= link_to 'SIGN IN', new_user_session_path ,class: "btn btn-sm btn-white" %>
-         <% end %>
-        
-       </div>
-       <% if user_signed_in? %>
-        <div class="navbar-buttons mbr-section-btn">
-         <%= link_to 'EDIT PROFILE', edit_user_registration_path ,class: "btn btn-sm btn-primary" %></td>
-
-       <% else %>
-       <div class="navbar-buttons mbr-section-btn">
-         <%= link_to 'CREATE AN ACCOUNT', new_user_registration_path ,class: "btn btn-sm btn-primary" %></td>
-       <% end %>
-       </div>
-       <div class="navbar-buttons mbr-section-btn">
-       <% if user_signed_in? %>
-       <%= link_to 'LOG OUT', destroy_user_session_path, method: :delete, class: "btn btn-sm btn-white-outline"%>
-       <% else %>
-  <%= link_to 'OPEN DOCUMENT ACCOUNT', new_user_registration_path, class: "btn btn-sm btn-white-outline"%>
+ <div class="menu cid-qStcGrjtgB" once="menu" id="menu1-e">
+    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+      <div class="menu-logo">
+        <div class="navbar-brand">
+          <span class="navbar-logo">
+              <%= link_to(image_tag("/assets/logo2.png") , root_path) %>
+          </span>
+          <!-- <span class="navbar-caption-wrap">
+            <a class="navbar-caption text-white display-4" href="javascritp:void(0);">
+              MOBIRISE
+            </a>
+          </span> -->
+        </div>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+          <li class="nav-item">
+            <a class="nav-link link text-white" href="#">
+              DEPOSIT
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link text-white" href="#">
+              WITHDRAW 
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link text-white" href="#">
+              WALLET 
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link text-white" href="#">
+              EXCHANGE 
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link text-white" href="#">
+              SUPPORT 
+            </a>
+          </li>
+        </ul>
+        <% if !user_signed_in? %>
+         <div class="navbar-buttons mbr-section-btn">
+          <%= link_to 'SIGN IN', new_user_session_path ,class: "btn btn-sm btn-white" %>
+         </div>
         <% end %>
-       </div>
-     </div>
-   </nav>
- </div>
+       
+        <% if user_signed_in? %>
+         <div class="navbar-buttons mbr-section-btn">
+          <%= link_to 'EDIT PROFILE', edit_user_registration_path ,class: "btn btn-sm btn-primary" %></td>
+
+        <% else %>
+        <div class="navbar-buttons mbr-section-btn">
+          <%= link_to 'CREATE AN ACCOUNT', new_user_registration_path ,class: "btn btn-sm btn-primary" %></td>
+        <% end %>
+        </div>
+        <div class="navbar-buttons mbr-section-btn">
+        <% if user_signed_in? %>
+        <%= link_to 'LOG OUT', destroy_user_session_path, method: :delete, class: "btn btn-sm btn-white-outline"%>
+        <% else %>
+        <%= link_to 'OPEN DOCUMENT ACCOUNT', new_user_registration_path, class: "btn btn-sm btn-white-outline"%>
+         <% end %>
+        </div>
+      </div>
+    </nav>
+  </div>
