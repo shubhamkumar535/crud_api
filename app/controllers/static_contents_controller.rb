@@ -17,6 +17,6 @@ def termsconditions
 @data =  StaticContent.find(3)
 end
    
-end
+
 	
 end
