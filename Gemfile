@@ -36,6 +36,7 @@ gem 'activeadmin'
 gem 'pry'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'ckeditor'
 gem 'recaptcha',require: 'recaptcha/rails'
 
 

@@ -46,3 +46,39 @@
 </div>
 </div>
 </div>
+
+ <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
+<script>
+
+jQuery.validator.addMethod("noSpace", function(value, element) { 
+ return value.indexOf(" ") < 0 && value != ""; 
+}, "No space please and don't leave it empty");
+
+$(document).ready(function(){
+$("#new_user").validate({
+  
+  errorPlacement: function (error, element) {
+   error.insertBefore(element);
+   },
+  rules: {
+    
+    "user[email]":{
+      noSpace: true,
+      required: true,
+      maxlength: 30,
+      email: true
+      }
+        messages: {
+
+    "user[email]":{
+      required: "This field is required",
+      maxlength: "Email should not be more than 30 characters"
+
+      }
+      }
+});
+});
+
+</script>
+  

@@ -49,7 +49,10 @@
          </li>
        </ul>
        <div class="navbar-buttons mbr-section-btn">
+         <% if !user_signed_in? %>
+         <% else %>
          <%= link_to 'SIGN IN', new_user_session_path ,class: "btn btn-sm btn-white" %>
+         <% end %>
         
        </div>
        <% if user_signed_in? %>
