@@ -10,5 +10,5 @@ class SessionController < Devise::SessionsController
        respond_with_navigational(resource) { render :new }
      end 
    end
-end
+
 end
