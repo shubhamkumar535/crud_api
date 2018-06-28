@@ -1,9 +1,9 @@
 ActiveAdmin.register User do
-	actions :all, except: :edit
+
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-# permit_params :list, :of, :attributes, :on, :model
+ permit_params :email
 #
 # or
 #
@@ -12,48 +12,66 @@ ActiveAdmin.register User do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-
-
+        
+actions :all 
 index do
+   
    selectable_column
    id_column
+   column :name
    column :email
-   column() { |instance| link_to 'approve' }
-   column() { |instance| link_to 'block'}
-  
-    actions
- end
 
-member_action :approve, :method => :post do
-    # Just a regular controller method in here
-    user = User.find params[:id]
-    user.approve!
-    redirect_to admin_user_path(user)
-  end
-  member_action :block, :method => :post do
-    # Just a regular controller method in here
-    user = User.find params[:id]
-    user.block!
-    redirect_to admin_user_path(user)
-  end
-# controller do
+   
+    actions defaults: true do |i|
+    
+       if i.approved == false
+       link_to('Approve' ,approve_path(i.id), method: :put ,data: { confirm: 'Are you sure?' })
+       else
+       link_to('Block' ,block_path(i.id), method: :put ,data: { confirm: 'Are you sure?' })
 
-# def show
-# 	binding.pry
-# 	@user= User.find(params[:id])
-# end
+     end
 
-# def destroy
-# 	 @user = User.find(params[:id])
-#      @user.destroy
-#  end
+   end
 
 
-# def Block
-# 	 if @user = User.find(params[:id])
-# 	 @user.Block
-# end	
+   # column :actions do |item|
 
-# end
-# end
+     # links = []
+   #   links << link_to('Delete', delete_admin_user_path(item),:data => {:confirm => 'Are you sure you want to delete the user?'})
+   #   links << link_to('show', show_admin_user_path(item))
+         
+    
+   # end
+end
+
+form do |f|
+  f.input :email
+ 
+  f.submit
+end
+
+
+controller do 
+   def approve
+       @user=User.find(params[:id])
+     if @user.update(approved: true)
+      @user.send_confirmation_instructions
+       redirect_to admin_user_path(@user)
+     else
+       render :admin_user
+     end
+   end
+
+   def block
+     @user=User.find(params[:id])
+     if @user.update(approved: false)
+       redirect_to admin_user_path(@user)
+     else
+       render :admin_user
+     end
+   end
+
+end
+
+
 end

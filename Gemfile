@@ -36,6 +36,8 @@ gem 'activeadmin'
 gem 'pry'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'recaptcha',require: 'recaptcha/rails'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

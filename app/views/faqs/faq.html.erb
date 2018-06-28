@@ -1,0 +1,107 @@
+ <div class="cid-qStcGschwM mbr-fullscreen mbr-parallax-background d-flex align-items-end min-ht-450" id="header2-f">
+<div class="container">
+<div class="row align-items-center justify-content-center min-ht-200">
+<div class="mbr-white col-md-10 text-center">
+<h4 class="mbr-section-title mbr-bold pb-1 mbr-fonts-style">
+The world’s largest and most advanced cryptocurrency trading platform
+</h4>
+<p class="mbr-text pb-3 mbr-fonts-style">
+Start trading Bitcoin (BTC), XRP, Litecoin (LTC), Ether (ETH) and Bitcoin Cash (BCH).
+</p>
+<div class="mbr-section-btn1">
+<a class="btn btn-sm btn-yellow same-width-btn" href="register.html">CREATE ACCOUNT</a>
+<a class="btn btn-sm btn-white same-width-btn" href="javascritp:void(0);">EXCHANGE</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="middle-container">
+<div class="container-custome">
+<div class="row">
+<div class="col-12">
+<div class="static_content">
+<div class="static_head">
+<h4 class="font-22">Frequently Asked Questions</h4>
+</div>
+
+<% @data.each do |data| %>
+<div id="accordion-faq" class="accordion-faq">
+ <div class="card card-faq">
+   <div class="card-header" id="heading<%= data.id %>">
+     <h5 class="mb-0">
+       <button class="btn btn-link" data-toggle="collapse" data-target="#collapse<%= data.id %>" aria-expanded="true" aria-controls="collapse<%= data.id %>">
+         <span class="question">Q.<%= data.id %></span> <%= sanitize data.question %>
+       </button> 
+     </h5>
+   </div>
+   <div id="collapse<%= data.id %>" class="collapse show" aria-labelledby="heading<%= data.id %>" data-parent="#accordion-faq">
+     <div class="card-body">
+       <h6>Answer</h6>
+       <p> <%= sanitize data.answer %></p>
+     </div>
+   </div>
+ </div>
+ <% end %>
+
+ </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+ <div class="cid-qStcGschwM mbr-fullscreen mbr-parallax-background d-flex align-items-end min-ht-450" id="header2-f">
+<div class="container">
+<div class="row align-items-center justify-content-center min-ht-200">
+<div class="mbr-white col-md-10 text-center">
+<h4 class="mbr-section-title mbr-bold pb-1 mbr-fonts-style">
+The world’s largest and most advanced cryptocurrency trading platform
+</h4>
+<p class="mbr-text pb-3 mbr-fonts-style">
+Start trading Bitcoin (BTC), XRP, Litecoin (LTC), Ether (ETH) and Bitcoin Cash (BCH).
+</p>
+<div class="mbr-section-btn1">
+<a class="btn btn-sm btn-yellow same-width-btn" href="register.html">CREATE ACCOUNT</a>
+<a class="btn btn-sm btn-white same-width-btn" href="javascritp:void(0);">EXCHANGE</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="middle-container">
+<div class="container-custome">
+<div class="row">
+<div class="col-12">
+<div class="static_content">
+<div class="static_head">
+<h4 class="font-22">Frequently Asked Questions</h4>
+</div>
+
+<% @data.each do |data| %>
+<div id="accordion-faq" class="accordion-faq">
+ <div class="card card-faq">
+   <div class="card-header" id="heading<%= data.id %>">
+     <h5 class="mb-0">
+       <button class="btn btn-link" data-toggle="collapse" data-target="#collapse<%= data.id %>" aria-expanded="true" aria-controls="collapse<%= data.id %>">
+         <span class="question">Q.<%= data.id %></span> <%= sanitize data.question %>
+       </button> 
+     </h5>
+   </div>
+   <div id="collapse<%= data.id %>" class="collapse show" aria-labelledby="heading<%= data.id %>" data-parent="#accordion-faq">
+     <div class="card-body">
+       <h6>Answer</h6>
+       <p> <%= sanitize data.answer %></p>
+     </div>
+   </div>
+ </div>
+ <% end %>
+
+ </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

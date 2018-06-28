@@ -1,5 +1,11 @@
-<p>Welcome <%= @email %>!</p>
-
-<p>You can confirm your account email through the link below:</p>
-
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+<% if User.find_by(email: @email).approved == true %>
+<h2 style="color:green;">Hello <%= User.find_by(email: @email).name%>!</h2>
+<h3 style="color:green;">Your email is <%= @email %>!</h3>
+<p style="color:green;">You can confirm your account email through the button below:</p>
+<p>	<%= link_to '<button type="button">Confirm my account</button>'.html_safe, confirmation_url(@resource, confirmation_token: @token) %></p>
+    
+    <% elsif User.find_by(email: @email).approved == false %>
+<h2 style="color:green;">Hello User, <br> <p> You are not approved by Administrator to access. You can login into your account once you are approved by the admin</h2>
+    <% else %>
+    <h2 style="color:green;">Hello Admin, <br> <p> You have new Request for approval.</h2>
+<% end %>

@@ -4,16 +4,18 @@
     <title>Htmltest</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application.js', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  <%= render "layouts/header" %>
-
-    <%= yield %>
-
-  <%= render "layouts/footer" %>
+   <% if request.path == root_path || request.path == users_path ||  request.path ==faq_path || request.path ==help_path  ||request.path == privacypolicy_path  || request.path ==termsconditions_path %>
+    <%= render "layouts/header" %>
+ <% end %>
+      <%=yield %>
+ <% if request.path == root_path ||  request.path == users_path || request.path ==faq_path || request.path ==help_path  ||request.path == privacypolicy_path  || request.path ==termsconditions_path %>
+    <%= render "layouts/footer" %>
+ <% end %>
 
 
   </body>
