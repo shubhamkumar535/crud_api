@@ -65,7 +65,7 @@
         </div>
         <div class="navbar-buttons mbr-section-btn">
         <% if user_signed_in? %>
-        <%= link_to 'LOG OUT', destroy_user_session_path, method: :delete, class: "btn btn-sm btn-white-outline"%>
+        <%= link_to 'LOG OUT', destroy_user_session_path,class: "btn btn-sm btn-white-outline"%>
         <% else %>
         <%= link_to 'OPEN DOCUMENT ACCOUNT', new_user_registration_path, class: "btn btn-sm btn-white-outline"%>
          <% end %>
