@@ -73,3 +73,74 @@
  </div>
  </div>
 <% end %>
+
+
+ <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
+  <script>
+
+  jQuery.validator.addMethod("noSpace", function(value, element) { 
+  return value.indexOf(" ") < 0 && value != ""; 
+  }, "No space please and don't leave it empty");
+
+  $(document).ready(function(){
+  $("#new_user").validate({
+   
+   errorPlacement: function (error, element) {
+    error.insertBefore(element);
+    },
+     rules: {
+     "user[name]":{
+       required: true,
+       maxlength: 30,
+       minlength: 3
+     },
+
+     "user[email]":{
+       required: true,
+       maxlength: 30,
+       email: true
+     },
+     "user[password]":{
+       required: true,
+       maxlength: 8,
+       minlength: 6
+     },
+     "user[password_confirmation]":{
+       required: true,
+       maxlength: 8,
+       equalTo: "#user_password"
+     }
+       "user[current_password]":{
+       required: true,
+       maxlength: 8,
+       equalTo: "#user_password"
+     }
+   }, 
+   
+   messages: {
+     "user[name]":{
+       required: "This field is required",
+       minlength: "Name should not be more than 3 characters",
+       maxlength: "Name should not be more than 30 characters"
+       
+     },
+
+     "user[email]":{
+       required: "This field is required",
+       minlength: "Password should not be more than 6 characters",
+       maxlength: "Email should not be more than 30 characters"
+
+     },
+     
+     "user[password]":{
+       required: "This field is required",
+       minlength: "Password should not be more than 6 characters",
+       maxlength: "Password should not be more than 20 characters"
+      
+
+     }
+   }
+  });
+ });
+ </script>

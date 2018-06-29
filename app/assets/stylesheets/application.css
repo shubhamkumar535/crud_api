@@ -11,19 +11,20 @@
  * It is generally better to create a new file per style scope.
  *
 
- *= require_self
- *= bootstrap.min.css
- *= bootstrap-grid.min.css
- *= bootstrap-reboot.min.css
- *= botexa-icons.css
- *= mbr-additional.css
- *= mobile.css
- *= style2.css
- *= style1.css
- *= style.css
- *= styles.css
- *= custome.css
- *= tether.min.css
 
-  *= require_tree .
+ * require_self
+ *= require bootstrap.min.css
+ *= require bootstrap-grid.min.css
+ *= require bootstrap-reboot.min.css
+ *= require botexa-icons.css
+ *= require mbr-additional.css
+ *= require mobile.css
+ *= require style2.css
+ *= require style1.css
+ *= require style.css
+ *= require styles.css
+ *= require custome.css
+ *= require tether.min.css
+
+  * require_tree .
  */

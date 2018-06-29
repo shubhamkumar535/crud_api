@@ -4,6 +4,8 @@
 // `app/assets/stylesheets/active_admin/mixins/_variables.scss` in the
 // Active Admin source.
 //
+@import "active_admin/mixins";
+@import "active_admin/base";
 // For example, to change the sidebar width:
 // $sidebar-width: 242px;
 
