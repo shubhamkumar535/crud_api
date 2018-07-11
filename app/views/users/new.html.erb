@@ -1,0 +1,16 @@
+<h1>User Registration</h1>
+
+<%= form_with scope: :users,url: users_path, local: true do |f| %>
+  
+
+  <p><%= f.label :name %><br>
+  <%= f.text_field :name%></p>
+
+  <p><%= f.label :email %><br>
+  <%= f.text_field :email%></p>
+
+  <p><%= f.label :phone %><br>
+  <%= f.text_field :phone%></p>
+
+  <%= f.submit %>
+<% end %>
